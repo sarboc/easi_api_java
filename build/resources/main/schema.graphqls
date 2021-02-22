@@ -1,0 +1,15 @@
+type Query {
+  accessibilityRequestById(id: ID): AccessibilityRequest 
+}
+
+type AccessibilityRequest {
+    id: ID
+    name: String
+    system: System
+}
+
+type System {
+  id: ID
+  name: String
+  lcid: String
+}

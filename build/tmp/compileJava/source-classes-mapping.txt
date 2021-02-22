@@ -1,0 +1,6 @@
+EASi/Test/API/demo/GraphQLProvider.java
+ EASi.Test.API.demo.GraphQLProvider
+EASi/Test/API/demo/EaSiTestApiApplication.java
+ EASi.Test.API.demo.EaSiTestApiApplication
+EASi/Test/API/demo/GraphQLDataFetchers.java
+ EASi.Test.API.demo.GraphQLDataFetchers
