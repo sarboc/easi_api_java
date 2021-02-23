@@ -17,9 +17,21 @@ dependencies {
     implementation 'com.graphql-java:graphql-java-spring-boot-starter-webmvc:1.0'
     implementation 'com.google.guava:guava:26.0-jre'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
+	// PostgresSQL-specific connector for JPA
+	implementation('org.postgresql:postgresql:9.4-1206-jdbc42')
+
+	// Lombok autogenerates things like getters and setters
+	compileOnly('org.projectlombok:lombok')
+
+	compile ('org.springframework.security.oauth.boot:spring-security-oauth2-autoconfigure:2.0.1.RELEASE')
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
 	useJUnitPlatform()
+}
+
+configurations.all {
+	exclude group: 'org.springframework.boot', module: 'spring-boot-starter-logging'
+	exclude group: 'org.springframework.boot', module: 'logback-classic'
 }

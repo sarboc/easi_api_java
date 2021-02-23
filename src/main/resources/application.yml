@@ -1,0 +1,16 @@
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/easi_api_java"
+    username: java_test_user
+    password: password
+okta:
+  oauth2:
+    issuer: https://dev-533919.oktapreview.com/oauth2/default
+    clientId: 0oahpnkb44pcaOIBG0h7
+    scope: openid profile email
+    rolesClaim: groups
+    
