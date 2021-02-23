@@ -13,3 +13,14 @@ brew install --cask graphql-playground
 ./gradlew bootRun
 ```
 Open GraphQL Playground and use "http://localhost:8080/graphql" as the URL
+
+Database setup
+Yes, there are passwords committed in this repo. No, you shouldn't do this for anything deployed to prod. This is a sample project and not meant to ever be a production app.
+
+```
+psql postgres
+create user java_test_user;
+alter user java_test_user with encrypted password 'password';
+create database easi_api_java;
+grant all privileges on database easi_api_java to java_test_user;
+```
